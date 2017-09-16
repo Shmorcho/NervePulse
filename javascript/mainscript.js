@@ -163,8 +163,8 @@ $(document).ready(function(){
 		$("#bot").parent().css("height",($("#photocontainer").height() - Number(makeString($("#bot").parent().css("padding-top")))));
 		console.log(($("#photocontainer").height() - Number(makeString($("#bot").parent().css("padding-top")))));
 		console.log($("#bot").parent().height());
-		$("#photocontainer div canvas").css("top", paddt);
-		$("#bot").css("top", paddt);
+		//$("#photocontainer div canvas").css("top", paddt);
+		//$("#bot").css("top", paddt);
 		console.log(paddt);
 		//$("#photocontainer").css("padding-top", );
 
