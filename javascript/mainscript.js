@@ -160,7 +160,9 @@ $(document).ready(function(){
 		//$("#bot").parent().css("padding-top", paddt);
 		$("#photocontainer").css("padding-top", paddt);
 		console.log($("#bot").parent().attr("id"));
-		$("#bot").parent().css("height",($("#photocontainer").height() - Number(makeString($("#bot").parent().css("padding-top")))));
+		//$("#bot").parent().css("height",($("#photocontainer").height() - Number(makeString($("#bot").parent().css("padding-top")))));
+		$("#photocontainer").css("height", ($("#photocontainer").height() - paddt).toString() + "px");
+		console.log(window.innerHeight - navigationHeight);
 		console.log(($("#photocontainer").height() - Number(makeString($("#bot").parent().css("padding-top")))));
 		console.log($("#bot").parent().height());
 		//$("#photocontainer div canvas").css("top", paddt);
