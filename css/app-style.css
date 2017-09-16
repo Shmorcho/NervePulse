@@ -112,10 +112,10 @@ body{
 .coninside{
 	display: none;
 	position: fixed;
-	top: calc(10vh / 2);
+	/*top: calc(10vh / 2);*/
 	left:calc(10% / 2);
 	width: 90%;
-	height: 90vh;
+	/*height: 90vh;*/
 	z-index: 50;
 	-webkit-filter: opacity(0.9);
 	background-color: white;

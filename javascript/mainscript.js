@@ -35,6 +35,8 @@ table['eye'] = 0;
 table['eye'] = 0;
 table['eye'] = 0;
 
+var flag = false;
+var nname = "";
 function clickedElement(el){
 	var name = $(el).attr('data-key');
 	console.log("---- " + name + "--------");
@@ -44,12 +46,17 @@ function clickedElement(el){
 		//window.location = "https://gmail.com";
 		console.log(name);
 		/*$('#' + name).css("display", "block");*/
+		$("#" + name).css("height",window.innerHeight * 0.9);
+		$("#" + name).css("top",(window.innerHeight * 0.1) / 2);
+		flag = true;
+		nname = "#" + name;
 		$("#" + name).fadeIn();
 	}
 }
 
 function closeInfo(el){
 	//$(el).parent().css("display","none");
+	flag=false;
 	$(el).parent().fadeOut();
 	//var unsetname = "#" + $(el).parent().attr('id');
 	/*$("#bot")
@@ -219,6 +226,10 @@ $(document).ready(function(){
 		console.log("navheight: " + navigationHeight);
 		console.log("imageHeight: " + imageHeight);
 		console.log(paddt);
+		if(flag==true){
+			$(nname).css("height",window.innerHeight * 0.9);
+			$(nname).css("top",(window.innerHeight * 0.1) / 2);
+		}
 
 //		$('#bot').parent().css("height", $("#photocontainer").height() - ((window.innerHeight - navigationHeight - imageHeight) / 2));
 
