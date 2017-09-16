@@ -1,0 +1,308 @@
+html{
+	padding:0;
+	margin:0;
+}
+body{
+	margin:0;
+	padding:0;
+	background-color: lightgrey;
+}
+#mainlogo{
+
+	width:103px;
+	height:77px;
+	display: inline-block;
+	vertical-align: middle; 
+	margin-top:5px;
+	background: url('../src/mainlogo.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+#cont{
+	margin:0;
+	padding:0;
+
+}
+#maintitle{
+	height:87px;
+	/*font-size:72px;*/
+	margin:0;
+	padding:0;
+	width:100%;
+	text-align:center;
+	background-color: #333;
+	color:white;
+	font-family: Verdana;
+	vertical-align: middle;
+}
+#cont2{
+
+	margin:0 auto; 
+	padding:0px;
+	background-color: #333;
+	text-align:center;
+}
+#dcont{
+	display: inline-block;
+	width:80%;
+}
+#dmenu{
+	display: none;
+	width:100%;
+
+	height:47px;
+	background-color: #333;
+	/*vertical-align: bottom;*/
+	color:white;
+	vertical-align: middle;
+	text-align: left;
+	font-family: Verdana;
+	/*padding-left:5px;*/
+}
+#dmenu span{
+	vertical-align: middle;
+	padding-left:10px;
+	
+	line-height:47px;
+}
+#navmenu {
+	vertical-align: bottom;
+	display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-family: Verdana;
+ 	
+    
+}
+
+#navmenu li {
+
+    float: left;
+    margin:0;
+    padding:0;
+}
+
+#navmenu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin:0;
+}
+
+#navmenu li a:hover {
+    background-color: lightgrey;
+    color:#333;
+    
+}
+#page{
+	position: relative;
+	top:20px;
+	left:50px;
+	width:calc(100% - 130px);
+	height:calc(100vh - 224px);
+	background-color: grey;
+	border:5px solid #333;
+	border-radius: 30px;
+	padding:15px;
+	font-size: 24px;
+	color:white;
+	overflow: auto;
+	font-family: Verdana;
+}
+#page::-webkit-scrollbar{
+	border-radius: 30px;
+	width:0.4em;
+	height: calc(100vh - 244px);
+}
+#page::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 30px;
+}
+ 
+#page::-webkit-scrollbar-thumb {
+	border-radius: 30px;
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+#page::-webkit-scrollbar-button{
+	height: 30px;
+	visibility: hidden;
+}
+#page::-webkit-scrollbar-thumb:hover{
+	background-color: #484848;
+}
+::selection{
+	color:grey;
+	background-color: white;
+}
+#bottomp{
+	position:fixed;
+	height:20px;
+	width:100%;
+	background: #333;
+	bottom:0px;
+	color:white;
+	vertical-align: middle;
+	text-align: center;
+}
+h2{
+	text-align: center;
+}
+#flaglink{
+	position:fixed;
+	top:5px;
+	right:5px;
+	z-index: 10;
+}
+
+#flaglink2{
+	/*position:fixed;*/
+	float:right;
+	margin-right: 10px;
+	/*margin-top: 10px*/
+	padding-left: 0px;
+	z-index: 10;
+	vertical-align: middle;
+}
+/*#dmenu+ ul{
+	display:block;
+	position:absolute;
+	width:80%;
+	z-index: 20;
+	}
+*/
+/*.show{
+	display:block;
+	position:absolute;
+	width:80%;
+	z-index: 20;
+}*/
+@media screen and (max-width: 630px){
+
+	#dmenu+ ul{
+	/*display:block;*/
+	position:absolute;
+	width:80%;
+	z-index: 20;
+	
+}
+	#navmenu li{
+		display: inline-block;
+		clear:both;
+		width:100%;
+		/*position: relative;*/
+		margin:0 auto;
+		/*background-color: yellow;*/
+		/*margin: 0 auto;*/
+		text-align: center;
+		
+	}
+	#navmenu li a{
+		width: 100%;
+		/*position:relative;*/
+		background-color: #333;
+		/*position: relative;*/
+		display: block;
+		padding-left:10px;
+		text-align: left;
+		padding-right:0px;
+		margin:0px;
+
+	}
+	#navmenu{
+		display: none;
+	}
+	#dmenu{
+		display: inline-block;
+
+	}
+	#flaglink{
+		display: none;
+	}
+
+}
+@media screen and (max-width: 450px)
+{
+	#dmenu+ ul{
+	/*display:block;*/
+	position:absolute;
+	width:100%;
+	z-index: 20;
+	
+}
+	#dcont{
+		width:100%;
+	}
+	#navmenu{
+		width:100%;
+	}
+	#dmenu + ul{
+		width:100%;
+	}
+	#page{
+
+		top:0px;
+		left:0px;
+		width:calc(100vw - 40px);
+		border-radius: 0px;
+		border-bottom: none;
+		border-top: none;
+		height: calc(100vh - 184px);
+		font-size: 16px;
+	}
+	#maintitle{
+		height:87px;
+		font-size:36px;
+		vertical-align: middle
+	}
+	#page::-webkit-scrollbar{
+	border-radius: 30px;
+	width:0.2em;
+	height: calc(100vh - 244px);
+}
+
+
+	/*#navmenu li a:hover{
+		background-color: #333;
+		color:blue;
+	}*/
+}
+@media screen and (max-height: 660px)
+{
+	#page{
+
+		top:0px;
+		left:0px;
+		width:calc(100vw - 30px);
+		border-radius: 0px;
+		border-bottom: none;
+		border-top: none;
+		height: calc(100vh - 134px);
+		font-size: 16px;
+		padding:10px;
+	}
+	#maintitle{
+		height:47px;
+		font-size:36px;
+		vertical-align: middle
+
+	}
+	#mainlogo{
+		width:57px;
+		height:44px;
+		margin-top: 2px;
+		vertical-align: top;
+	}
+	#page::-webkit-scrollbar{
+	border-radius: 30px;
+	width:0.2em;
+	height: calc(100vh - 244px);
+}
+
+
+}

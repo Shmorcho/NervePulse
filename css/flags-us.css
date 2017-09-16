@@ -1,0 +1,16 @@
+/*!
+ * Generated with CSS Flag Sprite generator (https://www.flag-sprites.com/)
+ */
+
+.flag {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 19px;
+    background: url('../src/flags-us.png') no-repeat;
+}
+
+
+.flag.flag-us {
+    background-position: center;
+}

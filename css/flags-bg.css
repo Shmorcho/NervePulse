@@ -1,0 +1,15 @@
+/*!
+ * Generated with CSS Flag Sprite generator (https://www.flag-sprites.com/)
+ */
+
+.flag {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('../src/flags-bg.png') no-repeat;
+}
+
+
+.flag .flag-bg {
+    background-position: 0 0;
+}
