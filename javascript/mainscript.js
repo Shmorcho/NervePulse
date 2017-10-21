@@ -129,7 +129,7 @@ $(document).ready(function(){
 		navigationHeight = $('#goback').height() + Number(makeString($('#goback').css('padding-top'))) + Number(makeString($('#goback').css('padding-bottom')));
 
 		//if(imageWidth/window.innerWidth > imageHeight/(window.innerHeight - navigationHeight))
-		if(imageWidth>=imageHeight)
+		if(window.innerWidth>=window.innerHeight)
 		{
 			halfWidth = $(window).width() * 0.8;
 			halfHeight=0;
@@ -150,7 +150,7 @@ $(document).ready(function(){
 
 		$('#bot').mapster('resize', halfWidth, halfHeight, 0);
 		
-		window.alert(window.innerHeight + " " + $(window).height());
+		//window.alert(window.innerHeight + " " + $(window).height());
 		
 		imageHeight = $('#bot').height();
 		console.log(imageHeight);
