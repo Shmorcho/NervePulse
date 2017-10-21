@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
 <link rel="stylesheet" type="text/css" href="css/flags-us.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 </head>
 <body>
 <div id="cont">
@@ -12,7 +13,10 @@
 <div id="maintitle" onclick="displayHeight()" class="unselectable">NervePulse</div>
 <div id="cont2">
 <div id="dcont">
-<div id="dmenu" onclick="myFunction()"><span onclick="myFunction()"><b onclick="myFunction()">МЕНЮ</b></span>
+<div id="dmenu" class="unselectable" onclick="myFunction()">МЕНЮ<!--<span id="msp" onmousedown="myFunction()">МЕНЮ</span>-->  
+
+<!--<div id="dmenu"  class="unselectable" onclick="myFunction()"><span onclick="myFunction()"><button id="mlnk" onclick="myFunction()"><b>МЕНЮ</b></button></span>-->
+
 <!--<span id="flaglink2"><a href="index-en.html"><img src="src/blank.gif" class="flag flag-us" alt="English" title="English"></a></span>--></div>
 <ul id="navmenu">
   <li><a class="active" href="index.html">НАЧАЛО</a></li>
@@ -35,7 +39,7 @@ Project NervPulse is a nano-technology project where robots with the size of a m
 </div>
 <!--<span id="flaglink"><a href="index-en.html"><img src="src/blank.gif" class="flag flag-us" alt="English" title="English"></a></span>-->
 <div id="bottomp">
-<address>Copyright &copy Project NervePulse 2017/2018</address>
+<address>Copyright &copy Project NervePulse 2017</address>
 </div>
 
 <script>
@@ -67,10 +71,10 @@ function displayHeight()
 
 }
 
-
 window.onload = function(){
 	
 	displayHeight();
+	//document.getElementById("msp").addEventListener("click", myFunction);
 
 }
 
@@ -81,10 +85,12 @@ function myFunction() {
 }
 
 window.onclick = function(e){
-	if(!e.target.matches("#dmenu") && window.innerWidth <= 630){
+	
+	if(!e.target.matches("#dmenu")&& window.innerWidth <= 630){
 
 		document.getElementById("navmenu").style.display="none";
 	}
+	
 }
 window.onresize = function(ev){
 	displayHeight();

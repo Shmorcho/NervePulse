@@ -41,6 +41,19 @@ body{
 	font-family: 'logotext';
 	vertical-align: middle;
 	line-height:87px;
+	
+}
+#mlnk{
+	text-decoration:none;
+	color:white;
+	background-color: #333;
+	border:none;
+	font-family: Verdana;
+	height:100%;
+	font-size:16px;
+	text-align:left;
+	padding:0;
+	/*outline:none;*/
 }
 .unselectable {
     -webkit-touch-callout: none;
@@ -63,23 +76,27 @@ body{
 }
 #dmenu{
 	display: none;
-	width:100%;
-
+	width:calc(100% - 10px);
+	font-weight: bold;
 	height:47px;
 	background-color: #333;
 	/*vertical-align: bottom;*/
 	color:white;
 	vertical-align: middle;
 	text-align: left;
+	line-height:47px;
 	font-family: Verdana;
-	/*padding-left:5px;*/
+	padding-left:10px;
 }
 #dmenu span{
 	vertical-align: middle;
 	padding-left:10px;
-	
+	cursor:pointer;
 	line-height:47px;
+	
+	
 }
+
 #navmenu {
 	vertical-align: bottom;
 	display: inline-block;
@@ -206,6 +223,9 @@ h2{
 	z-index: 20;
 	
 }
+	#msp{
+		z-index:30;
+	}
 	#navmenu li{
 		display: inline-block;
 		clear:both;
@@ -250,6 +270,11 @@ h2{
 	z-index: 20;
 	
 }
+
+#msp{
+		z-index:30;
+	}
+
 	#dcont{
 		width:100%;
 	}
