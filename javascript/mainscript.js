@@ -129,7 +129,7 @@ $(document).ready(function(){
 		navigationHeight = $('#goback').height() + Number(makeString($('#goback').css('padding-top'))) + Number(makeString($('#goback').css('padding-bottom')));
 
 		//if(imageWidth/window.innerWidth > imageHeight/(window.innerHeight - navigationHeight))
-		if(window.innerWidth>=window.innerHeight)
+		if(window.innerWidth<=window.innerHeight)
 		{
 			halfWidth = $(window).width() * 0.8;
 			halfHeight=0;
