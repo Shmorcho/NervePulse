@@ -91,8 +91,8 @@ $(document).ready(function(){
 	var imageHeight = $('#bot').height();
 	var imageWidth = $('#bot').width();
 	var navigationHeight = $('#goback').height() + Number(makeString($('#goback').css('padding-top'))) + Number(makeString($('#goback').css('padding-bottom')));
-
-	halfHeight = (window.innerHeight - navigationHeight) * 0.8; 
+	console.log("Navigation height: " + navigationHeight);
+	halfHeight = ($(window).height() - navigationHeight) * 0.8; 
 
 	//$('#bot').mapster('resize', 200, 0,0);
 	//$('#bot').css("height", "");
@@ -128,18 +128,23 @@ $(document).ready(function(){
 		imageWidth = $('#bot').width();
 		navigationHeight = $('#goback').height() + Number(makeString($('#goback').css('padding-top'))) + Number(makeString($('#goback').css('padding-bottom')));
 
-		if(imageWidth/window.innerWidth > imageHeight/(window.innerHeight - navigationHeight))
+		//if(imageWidth/window.innerWidth > imageHeight/(window.innerHeight - navigationHeight))
+		if(imageWidth>=imageHeight)
 		{
-			halfWidth = window.innerWidth * 0.8;
+			halfWidth = $(window).width() * 0.8;
 			halfHeight=0;
 			console.log("yes1");
-			$("#bot").css("width", (window.innerWidth * 0.8).toString() + "px");
+			/*console.log($("#bot").height());
+			console.log($("#bot").width());*/
+			//console.log(window.innerWidth)
+			$("#bot").css("width", (($(window).width() * 0.8).toString() + "px"));
+			console.log($("#bot").width());
 		}
 		else{
-			halfHeight = (window.innerHeight - navigationHeight) * 0.8;
+			halfHeight = ($(window).height() - navigationHeight) * 0.8;
 			halfWidth = 0;
 			console.log("yes2");
-			$("#bot").css("height", (window.innerHeight * 0.8).toString() + "px");
+			$("#bot").css("height", (($(window).height() * 0.8).toString() + "px"));
 		}
 		
 
