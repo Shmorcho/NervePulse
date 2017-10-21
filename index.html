@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="cont">
-<div id="maintitle"><img src="src/blank.gif" id="mainlogo"></div>
+<div id="maintitle" onclick="displayHeight()"><img src="src/blank.gif" id="mainlogo"></div>
 <div id="cont2">
 <div id="dcont">
 <div id="dmenu" onclick="myFunction()"><span onclick="myFunction()"><b onclick="myFunction()">МЕНЮ</b></span>
@@ -39,10 +39,19 @@ Project NervPulse is a nano-technology project where robots with the size of a m
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 
+var sh;
+
+function displayHeight()
+{
+	sh = window.innerHeight;
+	document.getElementById("htitle").innerHTML = sh;
+
+}
+
+
 window.onload = function(){
 	
-	var sh = window.innerHeight;
-	document.getElementById("htitle").innerHTML = sh;
+	displayHeight();
 
 }
 
