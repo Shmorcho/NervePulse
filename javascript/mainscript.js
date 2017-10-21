@@ -149,6 +149,9 @@ $(document).ready(function(){
 		
 
 		$('#bot').mapster('resize', halfWidth, halfHeight, 0);
+		
+		window.alert(window.innerHeight + " " + $(window).height());
+		
 		imageHeight = $('#bot').height();
 		console.log(imageHeight);
 		imageWidth = $('#bot').width();
