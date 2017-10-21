@@ -12,20 +12,50 @@ var fscr = false;
 function goFull(){
 	console.log("neha");
 	var elem = document.getElementsByTagName("html")[0];
-	if(elem.webkitRequestFullScreen && fscr == false){
+	if(fscr == false){
+	if(elem.webkitRequestFullScreen){
   		elem.webkitRequestFullScreen();
   		//var p = screen.orientation.lock("landscape");
 
   		fscr = true;
   	}
-
-  	else if(document.webkitExitFullscreen && fscr == true) {
+	else if(elem.requestFullscreen){
+  		elem.requestFullscreen();
+  		fscr = true;
+  	}
+	else if(elem.requestFullscreen){
+  		elem.requestFullscreen();
+  		fscr = true;
+  	}
+	else if(elem.mozRequestFullScreen){
+  		elem.mozRequestFullScreen();
+  		fscr = true;
+  	}
+	else if(elem.msRequestFullscreen){
+  		elem.msRequestFullscreen();
+  		fscr = true;
+  	}
+	}
+	else if(fscr == true){
+  	if(document.webkitExitFullscreen) {
   		console.log("Help me");
   		document.webkitExitFullscreen();
   		fscr = false;
-
   	}
-  	console.log(document.webkitExitFullscreen);
+		if(document.exitFullscreen) {
+  		console.log("Help me");
+  		document.exitFullscreen();
+  		fscr = false;
+  	}
+	if(document.mozCancelFullScreen) {
+  		console.log("Help me");
+  		document.mozCancelFullScreen();
+  		fscr = false;
+  	}
+	
+	
+	}
+  	//console.log(document.webkitExitFullscreen);
 }
 
 
@@ -127,9 +157,9 @@ $(document).ready(function(){
 		imageHeight = $('#bot').height();
 		imageWidth = $('#bot').width();
 		navigationHeight = $('#goback').height() + Number(makeString($('#goback').css('padding-top'))) + Number(makeString($('#goback').css('padding-bottom')));
-
+		console.log("w/h " + $(window).width() + " " + $(window).height());
 		//if(imageWidth/window.innerWidth > imageHeight/(window.innerHeight - navigationHeight))
-		if(window.innerWidth<=window.innerHeight)
+		if($(window).width()<=$(window).height())
 		{
 			halfWidth = $(window).width() * 0.8;
 			halfHeight=0;
@@ -145,6 +175,7 @@ $(document).ready(function(){
 			halfWidth = 0;
 			console.log("yes2");
 			$("#bot").css("height", (($(window).height() * 0.8).toString() + "px"));
+			console.log($("#bot").height());
 		}
 		
 

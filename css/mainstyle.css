@@ -2,12 +2,17 @@ html{
 	padding:0;
 	margin:0;
 }
+@font-face{
+
+	font-family:'logotext';
+	src:url('../src/biting-my-nails.ttf');
+}
 body{
 	margin:0;
 	padding:0;
 	background-color: lightgrey;
 }
-#mainlogo{
+/*#mainlogo{
 
 	width:103px;
 	height:77px;
@@ -17,7 +22,8 @@ body{
 	background: url('../src/mainlogo.jpg') no-repeat;
 	background-position: center;
 	background-size: cover;
-}
+}*/
+
 #cont{
 	margin:0;
 	padding:0;
@@ -25,15 +31,24 @@ body{
 }
 #maintitle{
 	height:87px;
-	/*font-size:72px;*/
+	font-size:72px;
 	margin:0;
 	padding:0;
 	width:100%;
 	text-align:center;
 	background-color: #333;
 	color:white;
-	font-family: Verdana;
+	font-family: 'logotext';
 	vertical-align: middle;
+	line-height:87px;
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 #cont2{
 
@@ -289,7 +304,8 @@ h2{
 	#maintitle{
 		height:47px;
 		font-size:36px;
-		vertical-align: middle
+		vertical-align: middle;
+		line-height:47px;
 
 	}
 	#mainlogo{
