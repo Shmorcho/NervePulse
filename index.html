@@ -48,13 +48,19 @@ function displayHeight()
 	shh = document.getElementById("page");
 	shhh = shh.offsetHeight;
 	if(sw>=450 && sh>=660){
-		shh.height = sh-224;
+		console.log(sh + " " + shh.offsetHeight + " " + (sh-224))
+		shh.style.height = ((sh-224)+"px");
 	}
-	else{
-		console.log("i am not happy");
+	if(sh<660)
+	{
+		shh.style.height = ((sh-134)+"px");
 	}
-	console.log(shhh);
-	document.getElementById("htitle").innerHTML = sh + " " + shhh;
+	else if(sw<450 && sh>=660){
+		shh.style.height = ((sh-184)+"px");
+	}
+	//console.log(shhh);
+	document.getElementById("htitle").innerHTML = sh + " " + shhh + "K";
+	
 
 }
 
@@ -78,6 +84,7 @@ window.onclick = function(e){
 	}
 }
 window.onresize = function(ev){
+	displayHeight();
 	if(window.innerWidth > 630){
 		document.getElementById("navmenu").style.display="inline-block";
 	}

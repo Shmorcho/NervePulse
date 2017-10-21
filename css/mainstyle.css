@@ -104,7 +104,7 @@ body{
 	top:20px;
 	left:50px;
 	width:calc(100% - 130px);
-	height:calc(100vh - 224px);
+	/*height:calc(100vh - 224px);*/
 	background-color: grey;
 	border:5px solid #333;
 	border-radius: 30px;
@@ -252,7 +252,7 @@ h2{
 		border-radius: 0px;
 		border-bottom: none;
 		border-top: none;
-		height: calc(100vh - 184px);
+		/*height: calc(100vh - 184px);*/
 		font-size: 16px;
 	}
 	#maintitle{
@@ -282,7 +282,7 @@ h2{
 		border-radius: 0px;
 		border-bottom: none;
 		border-top: none;
-		height: calc(100vh - 134px);
+		/*height: calc(100vh - 134px);*/
 		font-size: 16px;
 		padding:10px;
 	}
