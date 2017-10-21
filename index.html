@@ -39,11 +39,14 @@ Project NervPulse is a nano-technology project where robots with the size of a m
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 
-var sh;
+var sh, shh, shhh;
 
 function displayHeight()
 {
 	sh = window.innerHeight;
+	shh = document.getElementById("page");
+	shhh = shh.offsetHeight;
+	console.log(shhh);
 	document.getElementById("htitle").innerHTML = sh;
 
 }
