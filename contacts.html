@@ -4,6 +4,8 @@
 <title>NervPulse</title>
 <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
 <link rel="stylesheet" type="text/css" href="css/flags-us.css">
+<link rel="stylesheet" type="text/css" href="css/moreinfo.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 </head>
@@ -21,17 +23,23 @@
 <ul id="navmenu">
   <li><a class="active" href="index.html">НАЧАЛО</a></li>
   <li><a href="app.html">ПРИЛОЖЕНИЕ</a></li>
-  <li><a href="about.html">ОТНОСНО</a></li>
-  <li><a href="contacts.html">КОНТАКТИ</a></li>
+  <li><a href="#">ОТНОСНО</a></li>
+  <li><a href="#">КОНТАКТИ</a></li>
 </ul>
 </div>
 </div>
 </div>
 <div id="page">
 <!--This is the Home page of Project NervPulse<br>Проект "NervePulse"-->
-<h2 id="htitle"><i>Нанотехнологиите в живота<br>Проект "NervePulse"</i></h2><br>
+<h3 id="htitle">Контакти за връзка:</h3>
 
-Нанотехнологиите са конструирани в много малък мащаб и в същото време могат да бъдат прилагани в много области. Примери за това са здравеопазване и медицина, информационни и комуникационни технологии и енергетика и околна среда. Тези технологии работят в мащаба на единичните молекули. Един нанометър се равнява но една милиардна от метъра (10-9), което означава 0,000 000 001 метра, или една милионна от милиметъра. Иначе казано един нанометър се отнася към една ябълка така, както една ябълка към Земята. Нанотехнологиите работят с материали, които са с размери  между 1 и 100 нм. Това е  диапазонът, наричен „наномащаб“. Могат да удължат живота на човек,да подобрят много технологии, които съществуват сега. Друг вариант е използването им за малки компютърни чипове или наноботи, които намират и поправят повредени артерии вътре в телата ни, да подпомагат белите кръвни клетки и така организмът ще бъде подпомогнат да се бори с различни микроорганизми и патогени. Също важно приложение на нанотехнологиите би било борбата с ракови клетки, което може да реши проблемите на хората, страдащи от тази болест. Наноботите може да се използват и за изграждане на временни вериги за предаване на нервни импулси и същевременно за възстановяване на нервните клетки.
+<div class="person" id="p1" onclick="showInfo(this)">Ивалин Чобанов &#9662 </div>
+<div class="info" id="i1">Проучил производството на нанороботи. Изработил nervepulse.tk<br>email: ivalin@chobanov.tk </div>
+<div class="person" id="p2" onclick="showInfo(this)">Правдомир Костов &#9662 </div>
+<div class="info" id="i2">Проучил приложения на нанотехнологии и изработил модел на гривната за нанороботите.<br>email: pravdomir1998@gmail.com </div>
+<div class="person" id="p3" onclick="showInfo(this)">Ивайло Белчев &#9662 </div>
+<div class="info" id="i3">Изработил постера, проучвал материали<br>email: ivailobelchev2000@gmail.com </div>
+
 <!--Project NervPulse was created by I.Chobanov, P.Kostov and I.Belchev for the physics forum in Kamchiya, 2017.<br>
 Project NervPulse is a nano-technology project where robots with the size of a molecule, called "nanobots", are being used to reconnect nerv-cells in order to recover the lost motor and sensory-function in the body. Read more in the "ABOUT" section above.<br>-->
 
@@ -78,6 +86,23 @@ window.onload = function(){
 
 }
 
+function showInfo(e){
+
+var id = e.id;
+
+	console.log("my id is: " + id);
+var st = "#i"+id[1];
+console.log(st);
+
+
+$("#i1").slideUp("slow");
+$("#i2").slideUp("slow");
+$("#i3").slideUp("slow");
+
+$(st).slideDown("slow");
+
+
+}
 
 function myFunction() {
 	//alert("hello");

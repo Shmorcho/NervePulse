@@ -1,0 +1,19 @@
+.person{
+
+	color:white;
+	width:calc(100% - 20px);
+	/*background-color:green;*/
+	margin-top:10px;
+	padding:10px;
+	cursor:pointer;
+	font-style: italic;
+}
+.info{
+	width:calc(100% - 20px);
+	padding:10px;
+	color:white;
+	/*background-color:green;*/
+	display:none;
+	font-size:16px;
+
+}
