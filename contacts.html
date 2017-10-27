@@ -42,7 +42,7 @@
 
 <h3 id="htitle">Хора, допринесли за развитието на проекта:</h2>
 <div class="person" id="p4" onclick="showInfo(this)">Димитър Дянков &#9662 </div>
-<div class="info" id="i4">Изработил дървен модел на наноробот</div>
+<div class="info" id="i4">Изработил макетен модел на наноробот</div>
 <!--Project NervPulse was created by I.Chobanov, P.Kostov and I.Belchev for the physics forum in Kamchiya, 2017.<br>
 Project NervPulse is a nano-technology project where robots with the size of a molecule, called "nanobots", are being used to reconnect nerv-cells in order to recover the lost motor and sensory-function in the body. Read more in the "ABOUT" section above.<br>-->
 
@@ -58,7 +58,37 @@ Project NervPulse is a nano-technology project where robots with the size of a m
 toggle between hiding and showing the dropdown content */
 
 var sh, sw, shh, shhh;
+var tm;
+var temph;
+var sized = false;
+function hideNav()
+{
+	//document.getElementById("cont").style.display="none";
+	$("#cont").slideUp(400);
+	temph = $("#page").height();
+	
+	$("#page").height((temph + 94) + "px");
+	sized = true;
 
+}
+function correctSize()
+{
+$("#page").height((temph - 94) + "px");
+displayHeight();
+}
+
+function dispNav()
+{
+if(sized==true){
+//document.getElementById("cont").style.display="block";
+$("#cont").slideDown(400);
+temph = $("#page").height();
+	
+	//correctSize();
+	setTimeout(correctSize,400);
+	}
+
+}
 function displayHeight()
 {
 	sh = window.innerHeight;
@@ -66,14 +96,19 @@ function displayHeight()
 	shh = document.getElementById("page");
 	shhh = shh.offsetHeight;
 	if(sw>=450 && sh>=660){
+	clearTimeout(tm);
+		dispNav();
 		console.log(sh + " " + shh.offsetHeight + " " + (sh-224))
 		shh.style.height = ((sh-224)+"px");
 	}
 	if(sh<660)
-	{
+	{clearTimeout(tm);
 		shh.style.height = ((sh-134)+"px");
+		tm = setTimeout(hideNav, 5000);
 	}
 	else if(sw<450 && sh>=660){
+	clearTimeout(tm);
+		dispNav();
 		shh.style.height = ((sh-184)+"px");
 	}
 	//console.log(shhh);
@@ -81,7 +116,7 @@ function displayHeight()
 	
 
 }
-
+document.getElementById("page").addEventListener("click", dispNav);
 window.onload = function(){
 	
 	displayHeight();
