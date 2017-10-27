@@ -60,7 +60,7 @@ toggle between hiding and showing the dropdown content */
 var sh, sw, shh, shhh;
 var tm;
 var temph;
-var sized = false;
+var sized = 0;
 function hideNav()
 {
 	//document.getElementById("cont").style.display="none";
@@ -68,18 +68,19 @@ function hideNav()
 	temph = $("#page").height();
 	
 	$("#page").height((temph + 94) + "px");
-	sized = true;
+	sized = 1;
 
 }
 function correctSize()
 {
 $("#page").height((temph - 94) + "px");
+sized=0;
 displayHeight();
 }
 
 function dispNav()
 {
-if(sized==true){
+if(sized==1){
 //document.getElementById("cont").style.display="block";
 $("#cont").slideDown(400);
 temph = $("#page").height();
@@ -103,7 +104,7 @@ function displayHeight()
 	}
 	if(sh<660)
 	{clearTimeout(tm);
-		shh.style.height = ((sh-134)+"px");
+		shh.style.height = ((sh-!sized*134)+"px");
 		tm = setTimeout(hideNav, 5000);
 	}
 	else if(sw<450 && sh>=660){
@@ -145,6 +146,7 @@ $(st).slideDown("slow");
 function myFunction() {
 	//alert("hello");
     document.getElementById("navmenu").style.display="block";
+	clearTimeout(tm);
 }
 
 window.onclick = function(e){
@@ -152,6 +154,7 @@ window.onclick = function(e){
 	if(!e.target.matches("#dmenu")&& window.innerWidth <= 630){
 
 		document.getElementById("navmenu").style.display="none";
+		displayHeight();
 	}
 	
 }
